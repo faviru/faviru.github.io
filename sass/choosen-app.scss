@@ -1,0 +1,95 @@
+.choosen-app {
+  width: 100%;
+  background-color: $light-bg;
+}
+
+.choosen-app__wrapper {
+  @include container;
+  padding: 33px 0;
+  padding-bottom: 38px;
+}
+
+.choosen-app__title {
+  @include pink-block-title;
+}
+
+.choosen-app__list {
+  @include list-default;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.choosen-app__item {
+  width: 100%;
+}
+
+.choosen-app__item label {
+  @include item-label;
+  margin:35px 0 0 0;
+
+  &::before {
+    @include item-label-before;
+    border-radius: 50%;
+  }
+
+  &:hover::before {
+    border-color: $border-color-hover;
+  }
+
+  &:active::before {
+    border-color: $border-color-active;
+  }
+}
+
+.choosen-app__input {
+  display: none;
+}
+
+.choosen-app__input:checked + label:before {
+  background-image: url('../img/point.png');
+  background-size: 15px 15px;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@media #{$tablet-widths} {
+  .choosen-app {
+    order: 1;
+    background: $lightest-bg;
+  }
+
+  .choosen-app__wrapper {
+    padding: 30px 0;
+  }
+
+.choosen-app legend {
+  width: auto;
+}
+  .choosen-app__list {
+    margin-top: 9px;
+  }
+
+  .choosen-app__item label {
+    padding-left: 57px;
+  }
+}
+
+@media #{$desktop-widths} {
+  .choosen-app {
+    width: 435px;
+  }
+
+  .choosen-app__wrapper {
+    width: auto;
+    padding: 0;
+  }
+
+  .choosen-app__wrapper fieldset {
+    padding: 0 23px 50px 23px;
+  }
+
+  .choosen-app__list {
+    margin-top: 10px;
+    margin-left: 53px;
+  }
+}

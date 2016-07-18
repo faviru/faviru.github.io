@@ -1,0 +1,154 @@
+.competition__container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.competition__description {
+  margin: 0 $page-margin-mobile;
+  padding-top: 45px;
+  padding-bottom: 19px;
+
+  p {
+    @include typography(14px, 30px, 400, $dark-text-color);
+    margin: 0;
+    text-align: center;
+  }
+}
+
+.competition__description span {
+  display: none;
+}
+
+.competition__fieldset{
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.competition__legend {
+  @include typography(14px, 18px, 400, $pink-text-color);
+  //width: 240px;
+  margin: 0 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.competition__send-form-wrapper {
+  @include container;
+  padding-bottom: 19px;
+}
+
+.competition__submit {
+  @include green-btn;
+  margin: 0;
+
+  &:hover {
+    background-color: $dark-green-color;
+  }
+
+  &:focus {
+    background-color: $dark-green-color;
+    color: rgba(255, 255, 255, 0.3);
+    outline: none;
+  }
+}
+
+.competition__send-note {
+  margin: 33px 0 0 0;
+  font-size: 14px;
+  line-height: 30px;
+  color: $dark-text-color;
+  text-align: center;
+  text-transform: uppercase;
+
+  sup {
+    color: $pink-text-color;
+  }
+
+  span {
+    display: none;
+  }
+}
+
+@media #{$tablet-widths} {
+  .competition__description {
+    padding: 90px 0 72px 0;
+
+    p {
+      font-size: 18px;
+      padding: 0 60px;
+    }
+  }
+
+  .competition__description span {
+    display: block;
+  }
+
+  .competition__title {
+    margin: 0 55px;
+    padding: 181px 0 80px 0;
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .competition__fieldset {
+    display: block;
+    border: 2px solid $border-color;
+    padding: 0 60px 50px 60px;
+  }
+
+  .competition__legend {
+    margin: 0 auto;
+  }
+
+  .competition__legend-wrapper {
+    margin: 0 32px;
+  }
+
+  .competition__send-form {
+    order: 5;
+  }
+
+  .competition__send-form-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 63px;
+    padding-bottom: 46px;
+  }
+
+  .competition__send-note {
+    margin: 0;
+    padding: 20px 0;
+  }
+
+  .competition__submit {
+    padding: 16px 0;
+    width: 300px;
+  }
+}
+
+@media #{$desktop-widths} {
+  .competition__container {
+    justify-content: space-between;
+    padding: 0 $page-margin-desktop;
+  }
+
+  .competition__description {
+      padding: 90px 0 73px 0;
+  }
+
+  .competition__description span {
+    display: inline;
+  }
+
+  .competition__send-form-wrapper {
+    padding-top: 57px;
+    padding-bottom: 0;
+  }
+
+  .competition__send-note span {
+    display: inline;
+  }
+}

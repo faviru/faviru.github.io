@@ -1,0 +1,195 @@
+.photo {
+  margin-top: 22px;
+  font-size: 0;
+
+  &--panorama {
+    margin-top: 0;
+  }
+}
+
+.photo__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: column;
+  box-sizing: border-box;
+  width: 280px;
+  margin: 0 auto;
+  padding: 18px 18px;
+  background-color: $light-bg;
+}
+
+.photo__link {
+  display: block;
+  position: relative;
+  text-decoration: none;
+}
+
+.photo--panorama img {
+  width: 320px;
+  height: 137px;
+}
+
+.photo--panorama .photo__link::after {
+  @include typography(12px, 24px, 700, $white-text-color);
+  position: absolute;
+  top: 0;
+  right: $page-margin-mobile;
+  content: 'Панорама дня';
+  width: 140px;
+  padding: 6px 0;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $pink-bg;
+}
+
+.photo__author {
+  @include typography(14px, 24px, 700, $dark-text-color);
+  margin: 0;
+}
+
+.photo__timing {
+  @include typography(12px, 24px, 300, $dark-text-color);
+  padding-left: 3px;
+  text-transform: uppercase;
+}
+
+.photo__comment {
+  @include typography(14px, 24px, 400, $dark-text-color);
+  width: 100%;
+  margin: 0 0 9px 0;
+}
+
+  .photo__like {
+    display: flex;
+    align-items: center;
+  }
+
+.photo__like-btn {
+  @include btn-default;
+  width: 13px;
+  height: 12px;
+  margin-right: 18px;
+  background-image: url('../img/icon-heart.svg');
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+.photo__like-count {
+  @include typography(12px, 24px, 400, $pink-text-color);
+  margin: 0;
+  text-transform: uppercase;
+}
+
+@media #{$tablet-widths} {
+  .photo {
+    width: 300px;
+    margin-top: 20px;
+  }
+
+  .photo__wrapper {
+    width: 300px;
+    height: 155px;
+    box-sizing: border-box;
+    padding: 23px 28px;
+  }
+
+  .photo--panorama .photo__link::after {
+    top: 55px;
+    right: $page-margin-tablet;
+  }
+
+  .photo__comment {
+    margin: 0;
+    max-height: 50px;
+    overflow: hidden;
+  }
+
+  .photo__like {
+    justify-content: space-between;
+    margin-top: auto;
+  }
+
+  .photo__like-btn {
+    order: 1;
+    margin-right: 0;
+  }
+
+  .photo__link img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .photo--panorama {
+    width: auto;
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    img {
+      width: 700px;
+      height: 510px;
+    }
+
+    .photo__wrapper {
+      flex-direction: initial;
+      align-items: baseline;
+      width: 620px;
+      height: auto;
+      margin: 0 $page-margin-tablet;
+    }
+
+    .photo__like {
+      order: 1;
+      margin: 0;
+    }
+
+    .photo__comment {
+      order: 2;
+    }
+  }
+
+}
+
+@media #{$desktop-widths} {
+  .photo {
+    margin-top: 52px;
+  }
+
+  .photo__link img {
+    height: 400px;
+  }
+
+  .photo--panorama {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .photo--panorama .photo__wrapper {
+    flex-direction: row;
+    width: 940px;
+    height: 96px;
+    margin: 0 $page-margin-desktop;
+  }
+
+  .photo--panorama .photo__link::after {
+    right: $page-margin-desktop;
+  }
+
+  .photo--panorama .photo__like {
+    width: auto;
+  }
+
+  .photo--panorama img {
+    width: 1200px;
+    height: 506px;
+  }
+
+  .photo__like {
+    justify-content: space-between;
+  }
+
+  .photo__like-btn {
+    margin-left: 20px;
+    margin-right: 5px;
+  }
+}

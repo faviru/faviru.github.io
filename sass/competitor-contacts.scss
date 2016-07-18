@@ -1,0 +1,120 @@
+.competitor-contacts {
+  width: 100%;
+  background: $lightest-bg;
+}
+
+.competitor-contacts legend {
+  display: none;
+}
+
+.competitor-contacts__wrapper {
+  @include container;
+  padding-top: 15px;
+  padding-bottom: 57px;
+}
+
+.competitor-contacts__list {
+  @include list-default;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.competitor-contacts__item {
+  flex-grow: 1;
+}
+
+.competitor-contacts__item-title {
+  @include pink-item-label;
+}
+
+.competitor-contacts__input {
+  @include item-input-text;
+}
+
+.competitor-contacts__input:hover {
+  border-color: $border-color-hover;
+}
+
+.competitor-contacts__input:focus {
+  border-color: $border-color-active;
+}
+
+@media #{$tablet-widths} {
+  .competitor-contacts {
+    order: 2;
+
+    legend {
+      display: block;
+    }
+
+    fieldset {
+      padding-top: 36px;
+      padding-bottom: 0;
+    }
+  }
+
+  .competitor-contacts__wrapper {
+    padding: 29px 0;
+    padding-bottom: 26px;
+  }
+
+  .competitor-contacts__item {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-bottom: 22px;
+  }
+
+  .competitor-contacts__item::after {
+    position: absolute;
+    content: '';
+    top: 2px;
+    right: 2px;
+    width: 60px;
+    height: 60px;
+    background-color: $border-color;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .competitor-contacts__item--phone::after {
+    background-image: url('../img/icon-phone.svg');
+  }
+
+  .competitor-contacts__item--email::after {
+    background-image: url('../img/icon-mail.svg');
+  }
+
+  .competitor-contacts__input {
+    flex-grow: 1;
+  }
+
+  .competitor-contacts__item-title {
+    order: 2;
+    margin-top: 12px;
+    padding-left: 17px;
+  }
+}
+
+
+@media #{$desktop-widths} {
+  .competitor-contacts__wrapper {
+    padding-top: 53px;
+    padding-bottom: 0;
+  }
+
+  .competitor-contacts__list {
+    justify-content: space-between;
+  }
+
+  .competitor-contacts__item {
+    width: 373px;
+    flex-grow: 0;
+    margin-bottom: 13px;
+  }
+
+  .competitor-contacts__item-title {
+    margin-bottom: 0;
+    margin-top: 9px;
+  }
+}

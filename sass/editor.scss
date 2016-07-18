@@ -1,0 +1,341 @@
+.editor {
+  background-color: $light-bg;
+}
+
+.editor__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px 0 5px 0;
+}
+
+.editor__input {
+  display: none;
+}
+
+.editor__preview {
+  display: block;
+  margin: 0 $page-margin-mobile;
+}
+
+.editor__tools {
+  width: 280px;
+}
+
+.editor__toggles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 37px;
+  margin-bottom: 33px;
+}
+
+.editor__toggle {
+  display: inline-block;
+  margin-right: 30px;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-image: url('../img/icon-sprite.svg');
+  opacity: .3;
+  cursor: pointer;
+}
+
+@media (max-width: 767px) {
+  .editor__toggle:hover {
+    opacity: .5;
+  }
+
+  #editor-1:checked ~ .editor__toggles .editor__toggle--crop {
+    background-position: -6px -86px;
+    opacity: 1;
+  }
+
+  #editor-2:checked ~ .editor__toggles .editor__toggle--fill {
+    background-position: -4px -196px;
+    opacity: 1;
+  }
+
+  #editor-3:checked ~ .editor__toggles .editor__toggle--contrast {
+    background-position: -4px -4px;
+    opacity: 1;
+  }
+
+  .editor__toggle--crop {
+    width: 44px;
+    height: 44px;
+    background-position: -6px -142px;
+  }
+
+  .editor__toggle--fill {
+    width: 48px;
+    height: 43px;
+    background-position: -4px -252px;
+  }
+
+  .editor__toggle--contrast {
+    width: 32px;
+    height: 32px;
+    margin-right: 0;
+    background-position: -4px -44px;
+  }
+
+  input[id="editor-1"]:checked ~ .editor__toggles .editor__bar--crop {
+    display: block;
+  }
+
+  input[id="editor-2"]:checked ~ .editor__toggles .editor__bar--fill {
+    display: block;
+  }
+
+  input[id="editor-3"]:checked ~ .editor__toggles .editor__bar--contrast {
+    display: block;
+  }
+}
+.editor__tools {
+  margin: 0 $page-margin-mobile;
+}
+
+.editor__bar {
+  display: none;
+  position: relative;
+  order: 1;
+  height: 2px;
+  background-color: $dark-text-color;
+  width: 240px;
+  margin-top: 40px;
+}
+
+.editor__toggler {
+  position: absolute;
+  content: '';
+  top: -6px;
+  right: 36px;
+  width: 10px;
+  height: 10px;
+  background-color: $lightest-bg;
+  border: 2px solid $border-color-active;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:active {
+    background-color: $pink-bg;
+  }
+}
+
+.editor__upload {
+  width: 320px;
+  border-top: 1px solid $border-color;
+}
+
+.editor__upload-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  width: 280px;
+  margin: 0 $page-margin-mobile;
+  padding: 40px 0;
+}
+
+.editor__btn {
+  @include typography(18px, 18px, 700, $pink-text-color);
+  width: 280px;
+  padding: 15px 0;
+  text-align: center;
+  background-color: $light-bg;
+  border-radius: 35px;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.editor__submit-btn {
+  border: 3px solid $pink-text-color;
+
+  &:hover {
+    color: $white-text-color;
+    background-color: $pink-bg;
+  }
+
+  &:active {
+    color: #e06989;
+  }
+}
+
+.editor__reset-btn {
+  color: #dddfe0;
+  border: 3px solid #dddfe0;
+
+  &:hover {
+    color: #b5b9be;
+    border-color: #b5b9be;
+  }
+
+  &:active {
+    color: #cbced2;
+    background-color: #b5b9be;
+    border-color: #b5b9be;
+  }
+}
+
+.editor__submit-btn {
+  margin-bottom: 12px;
+}
+
+@media #{$tablet-widths} {
+  .editor__wrapper {
+    flex-direction: column;
+    align-content: space-between;
+    height: 400px;
+    padding: 55px $page-margin-tablet;
+    padding-top: 58px;
+  }
+
+  .editor__preview {
+    width: 300px;
+    margin: 0;
+  }
+
+  .editor__preview img {
+    width: 300px;
+    heigth: 400px;
+  }
+
+  .editor__tools {
+    width: 275px;
+    height: 220px;
+    margin: 0;
+  }
+
+  .editor__toggles {
+    justify-content: space-between;
+    margin: 0;
+    margin-top: -15px;
+  }
+
+  .editor__toggle {
+    margin: 27px 0 25px 0;
+    background-size: 29px auto;
+    opacity: 1;
+  }
+
+  .editor__toggle--crop {
+    width: 22px;
+    height: 22px;
+    background-position: -3px -43px;
+  }
+
+  .editor__toggle--fill {
+    width: 24px;
+    height: 22px;
+    background-position: -1px -98px;
+  }
+
+  .editor__toggle--contrast {
+    width: 16px;
+    height: 16px;
+    margin: 18px 0 25px 5px;
+    background-position: -2px -2px;
+  }
+
+  .editor__bar {
+    display: block;
+    position: relative;
+    order: 0;
+    width: 202px;
+    margin: 30px 18px 37px 18px;
+
+    &::after {
+      position: absolute;
+      content: '';
+      top: 35px;
+      right: -18px;
+      height: 1px;
+      width: 275px;
+      background-color: $border-color;
+    }
+  }
+
+  .editor__upload {
+    width: 275px;
+    margin-top: auto;
+    border: none;
+  }
+  .editor__upload-wrapper{
+    margin: 0;
+    padding: 0;
+  }
+
+  .editor__btn {
+    width: 260px;
+  }
+
+  .editor__submit-btn {
+    margin-bottom: 23px;
+  }
+}
+
+@media #{$desktop-widths} {
+  .editor{
+    width: 940px;
+    margin: 0 $page-margin-desktop;
+    margin-bottom: 33px;
+  }
+
+  .editor__wrapper {
+    padding: 55px 60px 55px 80px;
+  }
+
+  .editor__tools {
+    width: 410px;
+    height: 230px;
+  }
+
+  .editor__toggle {
+    margin: 14px 0;
+    background-size: auto;
+  }
+
+  .editor__toggle--crop {
+    width: 44px;
+    height: 44px;
+    background-position: -6px -86px;
+  }
+
+  .editor__toggle--fill {
+    width: 48px;
+    height: 43px;
+    background-position: -4px -196px;
+  }
+
+  .editor__toggle--contrast {
+    width: 32px;
+    height: 32px;
+    margin-right: 0;
+    background-position: -4px -4px;
+  }
+
+  .editor__bar {
+    width: 288px;
+    margin: 30px 30px 30px 20px;
+
+    &::after {
+      width: 410px;
+      rigth: -30px;
+    }
+  }
+
+  .editor__upload {
+    width: 410px;
+  }
+
+  .editor__upload-wrapper {
+    width: 410px;
+    justify-content: space-between;
+  }
+
+  .editor__btn {
+    width: 180px;
+    margin: 0;
+    flex-grow: 0;
+  }
+}

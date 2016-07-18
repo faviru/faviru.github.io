@@ -1,0 +1,125 @@
+.intro {
+  position: relative;
+  z-index: 0;
+
+  img {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+.intro--photo,
+.intro--form,
+.intro__img {
+  background-color: #19222b;
+  background: url('../img/bg-back-mobile@1x.jpg') center no-repeat;
+}
+
+.intro--photo .intro__title {
+  @include typography(24px, 30px, 300, $white-text-color);
+  @include container;
+  padding: 97px 0 81px 0;
+  text-align: center;
+}
+
+.intro--form .intro__title {
+  @include typography(24px, 30px, 300, $white-text-color);
+  margin: 0 $page-margin-mobile;
+  padding: 95px 0 51px 0;
+  text-align: center;
+}
+
+@media (min-resolution: 1.5dppx) {
+  .intro--photo,
+  .intro--form,
+  .intro__img {
+    background-color: #19222b;
+    background-image: url('../img/bg-back-mobile@2x.jpg');
+    background-size: 700px auto;
+  }
+}
+
+.intro__img {
+  position: relative;
+  height: 456px;
+}
+
+@media #{$tablet-widths} {
+  .intro img {
+    width: 700px;
+    height: 545px;
+  }
+
+  .intro--photo,
+  .intro--form,
+  .intro__img {
+    background-image: url('../img/bg-back-tablet@1x.jpg');
+    background-position: top;
+  }
+
+  .intro--form .intro__title {
+    margin: 0 55px;
+    padding: 181px 0 80px 0;
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .intro--photo .intro__title {
+    padding: 180px 0 140px 0;
+    font-size: 50px;
+    line-height: 60px;
+  }
+
+  .intro__img {
+    height: 730px;
+  }
+
+  @media (min-resolution: 1.5dppx) {
+    .intro--photo,
+    .intro--form,
+    .intro__img {
+      background-image: url('../img/bg-back-tablet@2x.jpg');
+      background-size: cover;
+    }
+  }
+}
+
+
+@media #{$desktop-widths} {
+  .intro img {
+    width: 1050px;
+    height: 645px;
+    left: 147px;
+    bottom: 0;
+  }
+
+  .intro--photo h1 {
+    padding-bottom: 110px;
+  }
+
+  .intro--photo,
+  .intro--form,
+  .intro__img {
+    background-image: url('../img/bg-back-desktop@1x.jpg');
+  }
+
+  .intro--form .intro__title {
+    margin: 0 $page-margin-desktop;
+    padding: 174px 0 100px 0;
+  }
+
+  .intro--photo .intro__title {
+    padding: 173px 0 101px 0;
+  }
+
+    .intro--photo,
+  .intro--form, {
+    background-position: top;
+  }
+
+  .intro__img {
+    height: 855px;
+    background-size: cover;
+  }
+}

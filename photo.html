@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <title>HTML Academy: Пинк</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,300&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script src="js/picturefill.js"></script>
+</head>
+
+<body class="page">
+  <div class="page__wrapper">
+    <header class="page-header">
+      <div class="page-header__logo-block main-nav">
+        <a class="page-header__logo" href="./"></a>
+        <button class="main-nav__toggle"></button>
+      </div>
+      <nav class="main-nav__block">
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a href="./">Главная</a></li>
+          <li class="main-nav__item"><a>Фотографии</a></li>
+          <li class="main-nav__item"><a href="./form.html">Конкурс</a></li>
+          <li class="main-nav__item"><a href="https://htmlacademy.ru/">HTML Academy</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="intro intro--photo">
+      <h1 class="intro__title">Фотографии<br> пользователей</h1>
+    </section>
+    <section class="photos">
+      <p class="photos__promo">Взгляните на фотографии, которые выкладывают пользователи! Видите, как не хватает ваших?</p>
+
+      <article class="photo photo--panorama">
+        <a href="" class="photo__link">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/panorama-desktop@1x.jpg, img/panorama-desktop@2x.jpg 2x">
+            <source media="(min-width: 768px)" srcset="img/panorama-tablet@1x.jpg, img/panorama-tablet@2x.jpg 2x">
+            <img src="img/panorama-mobile@1x.jpg" srcset="img/panorama-mobile@2x.jpg 2x" width="320" height="180" alt="Панорама">
+          </picture>
+        </a>
+        <div class="photo__wrapper">
+          <p class="photo__author">Анна<span class="photo__timing">(5 минут назад)</span></p>
+          <p class="photo__comment">Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую транслацию в перископе, задавайте свои вопросы!</p>
+          <div class="photo__like">
+            <button class="photo__like-btn"></button>
+            <p class="photo__like-count">Нравится:215</p>
+          </div>
+        </div>
+      </article>
+      <div class="photos__container">
+        <article class="photo">
+          <a href="" class="photo__link">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-1-desktop@1x.jpg, img/photo-1-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-1-tablet@1x.jpg, img/photo-1-tablet@2x.jpg 2x">
+              <img src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" width="280" height="180" alt="">
+            </picture>
+          </a>
+          <div class="photo__wrapper">
+            <p class="photo__author">Левон<span class="photo__timing">(5 часов назад)</span></p>
+            <p class="photo__comment">Вчера он на луну летал, сегодня в руки к нам попал.</p>
+            <div class="photo__like">
+              <button class="photo__like-btn"></button>
+              <p class="photo__like-count">Нравится:356</p>
+            </div>
+          </div>
+        </article>
+        <article class="photo">
+          <a href="" class="photo__link">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-2-desktop@1x.jpg, img/photo-2-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-2-tablet@1x.jpg, img/photo-2-tablet@2x.jpg 2x">
+              <img src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" width="280" height="180" alt="">
+            </picture>
+          </a>
+          <div class="photo__wrapper">
+            <p class="photo__author">Антон<span class="photo__timing">(12 часов назад)</span></p>
+            <p class="photo__comment">Соседи будут рады!</p>
+            <div class="photo__like">
+              <button class="photo__like-btn"></button>
+              <p class="photo__like-count">Нравится:666</p>
+            </div>
+          </div>
+        </article>
+        <article class="photo">
+          <a href="" class="photo__link">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-3-desktop@1x.jpg, img/photo-3-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-3-tablet@1x.jpg, img/photo-3-tablet@2x.jpg 2x">
+              <img src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" width="280" height="180" alt="">
+            </picture>
+          </a>
+          <div class="photo__wrapper">
+            <p class="photo__author">Борис<span class="photo__timing">(20 часов назад)</span></p>
+            <p class="photo__comment">Здесь могла быть ваша цитата о высоком и вечном.</p>
+            <div class="photo__like">
+              <button class="photo__like-btn"></button>
+              <p class="photo__like-count">Нравится:215</p>
+            </div>
+          </div>
+        </article>
+        <article class="photo">
+          <a href="" class="photo__link">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-4-desktop@1x.jpg, img/photo-4-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-4-tablet@1x.jpg, img/photo-4-tablet@2x.jpg 2x">
+              <img src="img/photo-4-mobile@1x.jpg" srcset="img/photo-4-mobile@2x.jpg 2x" width="280" height="180" alt="">
+            </picture>
+          </a>
+          <div class="photo__wrapper">
+            <p class="photo__author">Сергей<span class="photo__timing">(25 часов назад)</span></p>
+            <p class="photo__comment">Самая кубанская в мире!</p>
+            <div class="photo__like">
+              <button class="photo__like-btn"></button>
+              <p class="photo__like-count">Нравится:4</p>
+            </div>
+          </div>
+        </article>
+        <article class="photo">
+          <a href="" class="photo__link">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-5-desktop@1x.jpg, img/photo-5-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-5-tablet@1x.jpg, img/photo-5-tablet@2x.jpg 2x">
+              <img src="img/photo-5-mobile@1x.jpg" srcset="img/photo-5-mobile@2x.jpg 2x" width="280" height="180" alt="">
+            </picture>
+          </a>
+          <div class="photo__wrapper">
+            <p class="photo__author">Максим<span class="photo__timing">(40 часов назад)</span></p>
+            <p class="photo__comment">Где снег-то?</p>
+            <div class="photo__like">
+              <button class="photo__like-btn"></button>
+              <p class="photo__like-count">Нравится:150</p>
+            </div>
+          </div>
+        </article>
+        <article class="photo">
+          <a href="" class="photo__link">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-6-desktop@1x.jpg, img/photo-6-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-6-tablet@1x.jpg, img/photo-6-tablet@2x.jpg 2x">
+              <img src="img/photo-6-mobile@1x.jpg" srcset="img/photo-6-mobile@2x.jpg 2x" width="280" height="180" alt="">
+            </picture>
+          </a>
+          <div class="photo__wrapper">
+            <p class="photo__author">Надежда<span class="photo__timing">(45 часов назад)</span></p>
+            <p class="photo__comment">Всем GM и взаимные лайки!</p>
+            <div class="photo__like">
+              <button class="photo__like-btn"></button>
+              <p class="photo__like-count">Нравится:2560</p>
+            </div>
+          </div>
+        </article>
+      </div>
+      <p class="photos__promo photos__promo--bottom">Затмите их всех!<br> Выкладывайте все, что накопилось в телефоне!
+      </p>
+    </section>
+    <section class="editor">
+      <form method="post" class="editor__form">
+        <div class="editor__wrapper">
+          <div class="editor__preview">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/photo-7-desktop@1x.jpg, img/photo-7-desktop@1x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-7-tablet@1x.jpg, img/photo-7-desktop@1x.jpg 2x">
+              <img src="img/photo-7-mobile@1x.jpg" width="280" height="400" alt="Загруженное изображение">
+            </picture>
+          </div>
+          <div class="editor__tools">
+            <input type="radio" name="editor" class="editor__input" id="editor-1" checked>
+            <input type="radio" name="editor" class="editor__input" id="editor-2">
+            <input type="radio" name="editor" class="editor__input" id="editor-3">
+            <div class="editor__toggles">
+              <label for="editor-1" class="editor__toggle editor__toggle--crop"></label>
+              <div class="editor__bar editor__bar--crop">
+                <div class="editor__toggler"></div>
+              </div>
+              <label for="editor-2" class="editor__toggle editor__toggle--fill"></label>
+              <div class="editor__bar editor__bar--fill">
+                <div class="editor__toggler"></div>
+              </div>
+              <label for="editor-3" class="editor__toggle editor__toggle--contrast"></label>
+              <div class="editor__bar editor__bar--contrast">
+                <div class="editor__toggler"></div>
+              </div>
+            </div>
+          </div>
+          <div class="editor__upload">
+            <div class="editor__upload-wrapper">
+              <input type="submit" class="editor__btn editor__submit-btn" value="Запостить">
+              <input type="reset" class="editor__btn editor__reset-btn" value="Отмена">
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+        <a class="page-footer__logo" href="./"></a>
+        <div class="page-footer__socials">
+          <a href="" class="socials-link socials-link--tw"></a>
+          <a href="" class="socials-link socials-link--fb"></a>
+          <a href="" class="socials-link socials-link--yt"></a>
+        </div>
+        <div class="page-footer__copyright">
+          <p>Разработано</p>
+          <a href="" class="page-footer__copyright-link"></a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

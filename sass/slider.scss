@@ -1,0 +1,35 @@
+.slider {
+  &__input {
+    display: none;
+  }
+}
+
+.slider__toggles {
+  text-align: center;
+}
+
+.slider__toggle {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin-right: 10px;
+  background-color: #283645;
+  font-size: 0;
+  vertical-align: middle;
+  border: 3px solid $lightest-bg;
+  border-radius: 50%;
+  opacity: .3;
+  cursor: pointer;
+
+  &:hover {
+    opacity: .6;
+  }
+
+  &:active {
+    opacity: .1;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+}

@@ -1,0 +1,57 @@
+.vacation-review {
+  background-color: $lightest-bg;
+}
+
+.vacation-review__wrapper {
+  @include container;
+  padding-top: 60px;
+  padding-bottom: 43px;
+}
+
+.vacation-review__input {
+  @include item-input-text;
+  height: 200px;
+  margin-top: 17px;
+  padding: 15px 20px;
+  resize: none;
+  overflow: hidden;
+}
+
+.vacation-review__input:hover {
+  border-color: $border-color-hover;
+}
+
+.vacation-review__input:focus {
+  border-color: $border-color-active;
+}
+
+@media #{$tablet-widths} {
+  .vacation-review {
+    order: 4;
+  }
+
+  .vacation-review__wrapper {
+    padding-top: 54px;
+    padding-bottom: 0;
+  }
+
+  .vacation-review__input {
+    margin-top: 38px;
+    width: 100%;
+    height: 190px;
+  }
+}
+
+@media #{$desktop-widths} {
+  .vacation-review__wrapper {
+    width: 940px;
+  }
+
+  .vacation-review__wrapper fieldset {
+    padding-bottom: 42px;
+  }
+  .vacation-review__input {
+    margin-top: 35px;
+    height: 126px;
+  }
+}

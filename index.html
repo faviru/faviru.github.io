@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <title>HTML Academy: Пинк</title>
+  <link href="css/normalize.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script src="js/picturefill.js"></script>
+</head>
+
+<body class="page">
+  <div class="page__wrapper">
+    <header class="page-header">
+      <div class="page-header__logo-block main-nav main-nav--nojs">
+        <div class="page-header__logo">
+        </div>
+        <button class="main-nav__toggle"></button>
+      </div>
+      <nav class="main-nav__block">
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a>Главная</a></li>
+          <li class="main-nav__item"><a href="./photo.html">Фотографии</a></li>
+          <li class="main-nav__item"><a href="./form.html">Конкурс</a></li>
+          <li class="main-nav__item"><a href="https://htmlacademy.ru/">HTML Academy</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section class="intro">
+      <div class="intro__img">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/iphone-hand-desktop@1x.png, img/iphone-hand-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/iphone-hand-tablet@1x.png, img/iphone-hand-tablet@2x.png 2x">
+          <img src="img/iphone-hand-mobile@1x.png" srcset="img/iphone-hand-mobile@2x.png 2x" width="256" height="286" alt="Пример приложения">
+        </picture>
+      </div>
+      <section class="app-download">
+        <div class="app-download__wrapper">
+          <h2 class="app-download__title">Взгляните на жизнь иначе!</h2>
+          <a href="https://itunes.apple.com/ru/app/pink" class="app-download__main">Скачать приложение</a>
+          <div class="app-download__app-container">
+            <a href="https://itunes.apple.com/ru/app/pink" class="app-download__apple"></a>
+            <a href="https://play.google.com/store/apps/pink" class="app-download__android"></a>
+            <a href="https://www.microsoft.com/ru-ru/store/apps/pink" class="app-download__microsoft"></a>
+          </div>
+          <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</p>
+        </div>
+      </section>
+    </section>
+    <section class="advantages">
+      <div class="advantages__promo">
+        <p>Устали от серости мегаполиса?</p>
+        <p>Нам есть, что вам<br> предложить!</p>
+      </div>
+      <div class="advantages__wrapper">
+        <div class="advantages__list">
+          <div class="advantages__item">
+              <img src="img/iphone-screen-1-desktop@1x.png" srcset="img/iphone-screen-1-desktop@2x.png 2x" width="292" height="302" alt="" class="advantages__item-img">
+            <h3 class="advantages__item-title">Поднимает настроение</h3>
+            <p>Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!</p>
+          </div>
+          <div class="advantages__item">
+              <img src="img/iphone-screen-2-desktop@1x.png" srcset="img/iphone-screen-2-desktop@2x.png 2x" width="292" height="302" alt="" class="advantages__item-img">
+
+            <h3 class="advantages__item-title">Меняет мир вокруг</h3>
+            <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+          </div>
+          <div class="advantages__item">
+              <img src="img/iphone-screen-3-desktop@1x.png" srcset="img/iphone-screen-3-desktop@2x.png 2x" width="292" height="302" alt="" class="advantages__item-img">
+            <h3 class="advantages__item-title">Заводит новых друзей</h3>
+            <p>Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+          </div>
+        </div>
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/iphone-screen-3-tablet@1x.png, img/iphone-screen-3-tablet@2x.png 2x">
+          <img src="img/iphone-screen-mobile@1x.png" srcset="img/iphone-screen-mobile@2x.png 2x" width="157" height="320" alt="Пример приложения" class="advantages__promo-img">
+        </picture>
+      </div>
+    </section>
+    <section class="efficiency">
+      <div class="efficiency__wrapper">
+        <div class="efficiency__img"></div>
+        <div class="efficiency__about">
+          <h3 class="efficiency__about-title">Эффект<br> на 24 часа!</h3>
+          <p>Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится
+            целые сутки!</p>
+          <a href="#">Узнать больше об исследовании</a>
+        </div>
+      </div>
+    </section>
+    <section class="reviews">
+      <div class="reviews__wrapper slider">
+        <input type="radio" name="reviews" id="reviews-input-1" class="slider__input" checked>
+        <input type="radio" name="reviews" id="reviews-input-2" class="slider__input">
+        <input type="radio" name="reviews" id="reviews-input-3" class="slider__input">
+        <div class="reviews__btn reviews__btn--prev"></div>
+        <div class="reviews__btn reviews__btn--next"></div>
+        <ul class="reviews__list">
+          <li class="reviews__item slider__item slider__item--1">
+            <div class="reviews__author">
+              <h3 class="reviews__author-name">Николай Петров</h3>
+              <p class="reviews__author-note">25 лет, водитель трамвая</p>
+            </div>
+            <p class="reviews__comment">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился
+              со своей будущей женой в комментариях к выложенной фотографии!»</p>
+          </li>
+          <li class="reviews__item slider__item slider__item--2">
+            <div class="reviews__author">
+              <h3 class="reviews__author-name"></h3>
+              <p class="reviews__author-note"></p>
+            </div>
+            <p class="reviews__comment"></p>
+          </li>
+          <li class="reviews__item slider__item slider__item--3">
+            <div class="reviews__author">
+              <h3 class="reviews__author-name"></h3>
+              <p class="reviews__author-note"></p>
+            </div>
+            <p class="reviews__comment"></p>
+          </li>
+        </ul>
+        <div class="slider__toggles reviews__toggles">
+          <label for="reviews-input-1" class="slider__toggle">1</label>
+          <label for="reviews-input-2" class="slider__toggle">2</label>
+          <label for="reviews-input-3" class="slider__toggle">3</label>
+        </div>
+      </div>
+    </section>
+
+    <section class="version">
+      <div class="version__wrapper slider">
+        <input type="radio" name="version-input" id="version-input-1" class="slider__input">
+        <input type="radio" name="version-input" id="version-input-2" class="slider__input" checked>
+        <input type="radio" name="version-input" id="version-input-3" class="slider__input">
+        <table class="version__list">
+          <tr>
+            <th class="version__title"></th>
+            <th class="version__title">
+              <p class="version__name">База</p>
+              <p class="version__price">1,99 USD</p>
+            </th>
+            <th class="version__title version__title--hit">
+              <p class="version__name">Стандарт</p>
+              <p class="version__price">3,99 USD</p>
+            </th>
+            <th class="version__title">
+              <p class="version__name">Анлим</p>
+              <p class="version__price">9,99 USD</p>
+            </th>
+          </tr>
+          <tr>
+            <td>
+              <div class="version__cell">
+                <p class="version__parameter--main">Розовый фильтер</p>
+              </div>
+            </td>
+            <td>
+              <div class="version__cell">
+                <p class="version__parameter">Розовый фильтер</p>
+                <div class="version__value version__value--yes"></div>
+              </div>
+            </td>
+            <td>
+              <div class="version__cell">
+                <p class="version__parameter">Розовый фильтер</p>
+                <div class="version__value version__value--yes"></div>
+              </div>
+            </td>
+            <td>
+              <div class="version__cell">
+                <p class="version__parameter">Розовый фильтер</p>
+                <div class="version__value version__value--yes"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="version__cell">
+                <p class="version__parameter--main">Смайлики</p>
+              </div>
+            </td>
+            <td>
+              <div class="version__cell">
+                <p class="version__parameter">Смайлики</p>
+                <div class="version__value version__value--no"></div>
+              </div>
+            </td>
+            <td>
+              <div class="version__cell">
+                <p class="version__parameter">Смайлики</p>
+                <div class="version__value version__value--yes"></div>
+              </div>
+            </td>
+            <td>
+              <div class="version__cell">
+                <p class="version__parameter">Смайлики</p>
+                <div class="version__value version__value--yes"></div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="version__cell">
+                <p class="version__parameter--main">Комментарии</p>
+              </div>
+            </td>
+            <td>
+              <div class="version__cell">
+                <p class="version__parameter">Комментарии</p>
+                <div class="version__value version__value--no"></div>
+              </div>
+            </td>
+            <td>
+              <div class="version__cell">
+                <p class="version__parameter">Комментарии</p>
+                <div class="version__value version__value--no"></div>
+              </div>
+            </td>
+            <td>
+              <div class="version__cell">
+                <p class="version__parameter">Комментарии</p>
+                <div class="version__value version__value--yes"></div>
+              </div>
+            </td>
+          </tr>
+        </table>
+        <div class="slider__toggles version__toggles">
+          <label for="version-input-1" class="slider__toggle">1</label>
+          <label for="version-input-2" class="slider__toggle">2</label>
+          <label for="version-input-3" class="slider__toggle">3</label>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacts">
+      <div class="contacts__wrapper">
+        <h2 class="contacts__title">Остались вопросы?<br> Свяжитесь с нами!</h2>
+        <div class="contacts__list">
+          <div class="contacts__item">
+            <h3 class="contacts__item-title">Звоните:</h3>
+            <p>+7 (812) 555-66-66</p>
+          </div>
+          <div class="contacts__item contacts__item--email">
+            <h3 class="contacts__item-title">Пишите:</h3>
+            <a>mail@htmlacademy.ru</a>
+          </div>
+          <div class="contacts__item">
+            <h3 class="contacts__item-title">Приезжайте в гости:</h3>
+            <p>ул. Большая Конюшенная, 19/8</p>
+          </div>
+        </div>
+      </div>
+      <div class="map-block" id="map-block">
+      </div>
+    </section>
+    <footer class="page-footer page-footer--index">
+      <div class="page-footer__wrapper">
+        <div class="page-footer__logo"></div>
+        <div class="page-footer__socials">
+          <a href="" class="socials-link socials-link--tw"></a>
+          <a href="" class="socials-link socials-link--fb"></a>
+          <a href="" class="socials-link socials-link--yt"></a>
+        </div>
+        <div class="page-footer__copyright">
+          <p>Разработано</p>
+          <a href="" class="page-footer__copyright-link"></a>
+        </div>
+      </div>
+    </footer>
+    </div>
+  <script src="js/main.js" defer></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBy4H01dUPhXpWlCsN9Xc0-jHiwg7FqFo4&callback=map" defer></script>
+</body>
+
+</html>

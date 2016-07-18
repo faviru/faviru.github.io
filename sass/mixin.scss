@@ -1,0 +1,133 @@
+@mixin list-default() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin btn-default() {
+  border: none;
+}
+
+@mixin a-btn-default() {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+
+@mixin typography($size, $height, $weight, $color){
+  font-size: $size;
+  line-height: $height;
+  font-weight: $weight;
+  color: $color;
+}
+
+@mixin pink-item-label() {
+  @include typography(14px, 30px, 400, $pink-text-color);
+  display: block;
+  margin: 15px 0 5px 0;
+  padding-left: 23px;
+  text-transform: uppercase;
+}
+
+@mixin pink-block-title() {
+  @include typography(14px, 18px, 400, $pink-text-color);
+  padding: 40px 0;
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+@mixin item-input-text() {
+  @include typography(18px, 30px, 400, $dark-text-color);
+  box-sizing: border-box;
+  width: 100%;
+  padding: 15px 21px;
+  outline: none;
+  border: 2px solid $border-color;
+}
+
+@mixin item-label() {
+  @include typography(18px, 40px, 400, $dark-text-color);
+  display: inline-block;
+  position: relative;
+  padding-left: 70px;
+  vertical-align: middle;
+}
+
+@mixin item-label-before() {
+  position: absolute;
+  left: 0;
+  content: '';
+  width: 35px;
+  height: 35px;
+  border: 2px solid $border-color;
+  outline: none;
+  background-color: $lightest-bg;
+  cursor: pointer;
+}
+
+@mixin green-btn() {
+    @include btn-default;
+    @include typography(18px, 30px, 700, $white-text-color);
+    margin: 0;
+    padding: 17px 0;
+    width: 280px;
+    background-color: $green-color;
+    text-align: center;
+    text-transform: uppercase;
+    border-radius: 2px;
+}
+
+
+@mixin container() {
+  width: 280px;
+  margin: 0 auto;
+
+  @media #{$tablet-widths} {
+    width: 620px;
+  }
+
+  @media #{$desktop-widths} {
+    width: 940px;
+  }
+}
+
+@mixin clearfix() {
+  &::after {
+    content: "";
+
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin triangle() {
+  position: absolute;
+  content: '';
+  width: 320px;
+  height: 32px;
+  bottom: -32px;
+  left: -($page-margin-mobile+2px);
+  background: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media #{$tablet-widths} {
+    left: -$page-margin-tablet;
+    width: 700px;
+    height: 55px;
+    bottom: -55px;
+  }
+
+  @media #{$desktop-widths} {
+    left: -$page-margin-desktop;
+    width: 1200px;
+    height: 94px;
+    bottom: -94px;
+  }
+}
+
+.grid {
+  outline: 2px solid red;
+}
+
