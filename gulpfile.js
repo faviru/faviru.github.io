@@ -12,6 +12,7 @@ var server = require("browser-sync");
 var imagemin = require("gulp-imagemin");
 var run = require("run-sequence");
 var del = require("del");
+var convertNewline = require("gulp-convert-newline");
 
 gulp.task("copy", function() {
   return gulp.src([
@@ -52,6 +53,9 @@ gulp.task("style", function() {
       ]}),
       mqpacker()
     ]))
+    .pipe(convertNewline({
+            newline: "crlf"
+    }))
     .pipe(gulp.dest("build/css"))
     .pipe(gulp.dest("css"))
     .pipe(server.reload({stream: true}))
