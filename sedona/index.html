@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Sedona</title>
+		<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+		<link href="css/normalize.css" rel="stylesheet">
+		<link href="css/style.min.css" rel="stylesheet">
+	</head>
+
+	<body>
+		<div class="container">
+			<header class="clearfix">
+				<nav class="main-navigation">
+					<div class="slogo"><a href="index.html"></a></div>
+					<ul>
+						<li>
+							<a href="#">Информация</a>
+						</li>
+						<li>
+							<a href="#">Фото и видео</a>
+						</li>
+						<li>
+							<a href="hotels.html">Гостиницы</a>
+						</li>
+						<li>
+							<a href="#">Карта штата</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+
+			<div class="content">
+				<div class="logo-block">
+					<img class="sedona-title" src="img/sedona-title.png" width="458" height="352" alt="Welcome to the gorgeous SEDONA">
+					<img class="logo-cutter" src="img/logo-cutter.png" width="1200" height="57" alt="background-part">
+				</div>
+				<div class="content-title">
+					<h2>Седона — небольшой городок в аризоне, заслуживающий большего!</h2>
+					<p>Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+				</div>
+				<div class="features features-left clearfix">
+					<div class="text-wrapper">
+						<div class="text">
+							<h2>Настоящий городок</h2>
+							<p class="number">№1</p>
+							<p>Седона — не аттракцион для туристов, там течет своя жизнь</p>
+						</div>
+					</div>
+				</div>
+				<div class="tips clearfix">
+					<div class="tip-wrapper house">
+						<h2>Жилье</h2>
+						<p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+					</div>
+					<div class="tip-wrapper meal">
+						<h2>Еда</h2>
+						<p>Всегда заказывайте ФИРМЕННЫЙ БУРГЕР, Вы НЕ разочаруетесь!</p>
+					</div>
+					<div class="tip-wrapper souvenir">
+						<h2>Сувениры</h2>
+						<p>Не только китайского, но и местного производства!</p>
+					</div>
+				</div>
+				<div class="features features-right clearfix">
+					<div class="text-wrapper">
+						<div class="text">
+							<h2>Там есть Мост&nbsp;дьявола</h2>
+							<p class="number">№2</p>
+							<p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+						</div>
+					</div>
+				</div>
+				<div class="features triple  clearfix">
+					<div class="text-wrapper">
+						<div class="text">
+							<h2>Небольшая площадь</h2>
+							<p class="number">№3</p>
+							<p>ВСЕ достопримечательности находятся очень близко</p>
+						</div>
+					</div>
+					<div class="text-wrapper">
+						<div class="text">
+							<h2>Красивая дорога</h2>
+							<p class="number">№4</p>
+							<p>Ехать в Седону из Лас-Вегаса совсем НЕ&nbsp;СКУЧНО!</p>
+						</div>
+					</div>
+					<div class="text-wrapper">
+						<div class="text">
+							<h2>Мало туристов</h2>
+							<p class="number">№5</p>
+							<p>Большинство едет в гранд каньон и толпится там</p>
+						</div>
+					</div>
+				</div>
+				<div class="search-block">
+					<div class="title-wrapper">
+						<h2>Заинтересовались?</h2>
+						<p>Укажите предполагаемые даты поездки,<br>
+						и мы покажем вам лучшие предложения гостиниц в седоне
+						</p>
+					</div>
+					<div class="search-title-block">
+						<a href="hotels.html">Поиск гостиницы в Седоне</a>
+					</div>
+					<div class="search-form search-form-show">
+						<form action="#" method="post">
+							<label for="date-in" class="time-lbl">Дата заезда:</label>
+							<input type="text" id="date-in" name="date-in" placeholder="24 апреля 2016">
+							<i class="icon-calendar"></i>
+							<label for="date-out" class="time-lbl">Дата выезда:</label>
+							<input type="text" id="date-out" name="date-out" placeholder="04 июля 2016">
+							<i class="icon-calendar"></i>
+							<label for="adults" class="client-type-lbl">Взрослые:</label>
+								<div class="age-box">
+									<button type="button" name="plus-adults" class="plus icon-plus"></button>
+									<input type="text" name="adults" class="client-type" id="adults" pattern="[1-8]" value="1" maxlength="1">
+									<button type="button" name="minus-adults" class="minus icon-minus"></button>
+								</div>
+							<label for="children" class="client-type-lbl">Дети:</label>
+								<div class="age-box">
+									<button type="button" name="plus-children" class="plus icon-plus"></button>
+									<input type="text" name="children" class="client-type" id="children" pattern="[0-8]" value="0" maxlength="1">
+									<button type="button" name="minus-children" class="minus icon-minus"></button>
+								</div>
+							<input type="submit" name="search" value="Найти">
+						</form>
+					</div>
+				</div>
+				<div class="map-block" id="map-block" style="width:1200px; height:595px;">
+				</div>
+			</div>
+
+			<footer class="transparent-footer">
+				<div class="tag">
+					<a href="https://www.google.ru/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=%23visitsedona">#VISITSEDONA</a>
+				</div> 
+				<div class="socials">
+					<a href="#" class="social-btn icon-twitter"></a>
+					<a href="#" class="social-btn icon-facebook"></a>
+					<a href="#" class="social-btn icon-youtube"></a>
+				</div>
+				<div class="copyright">
+					<p>Website by</p>
+					<a href="https://htmlacademy.ru"></a>
+				</div>
+			</footer>
+		</div>
+		<script src="js/script.min.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsnP3frtkwntjpS-QBdxJV-bgsgHaWATA&callback=map" ></script>
+	</body>
+	</html>
