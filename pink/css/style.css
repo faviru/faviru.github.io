@@ -368,12 +368,11 @@ img {
   display: none; }
 
 .reviews__item {
-  display: none; }
-  .reviews__item:first-of-type {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 5px; }
+  display: none;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 5px; }
 
 .reviews__author-name {
   font-size: 18px;
@@ -407,6 +406,11 @@ img {
   #reviews-input-2:checked ~ .reviews__toggles > label[for="reviews-input-2"]:active,
   #reviews-input-3:checked ~ .reviews__toggles > label[for="reviews-input-3"]:active {
     opacity: 1; }
+
+#reviews-input-1:checked ~ .reviews__list > .slider__item--1,
+#reviews-input-2:checked ~ .reviews__list > .slider__item--2,
+#reviews-input-3:checked ~ .reviews__list > .slider__item--3 {
+  display: flex; }
 
 .version {
   background: #f2f2f2; }
@@ -1005,13 +1009,20 @@ img {
   align-items: center; }
 
 .photo__like-btn {
+  display: none; }
+
+.photo__like-label {
   border: none;
   width: 13px;
   height: 12px;
   margin-right: 18px;
-  background-image: url("../img/icon-heart.svg");
+  background-image: url("../img/heart.png");
   background-repeat: no-repeat;
-  background-color: transparent; }
+  background-color: transparent;
+  background-size: contain;
+  cursor: pointer; }
+  .photo__like-label:focus {
+    outline: none; }
 
 .photo__like-count {
   font-size: 12px;
@@ -1020,6 +1031,9 @@ img {
   color: #d22856;
   margin: 0;
   text-transform: uppercase; }
+
+.photo__like-btn:checked + label {
+  background-image: url("../img/heart1.png"); }
 
 .socials-link {
   display: inline-block;
@@ -1672,7 +1686,7 @@ img {
   .photo__like{
     justify-content: space-between;
     margin-top: auto; }
-  .photo__like-btn{
+  .photo__like-label{
     order: 1;
     margin-right: 0; }
   .photo__link img{
@@ -1997,12 +2011,14 @@ img {
     display: block;
     content: '';
     position: absolute;
+    z-index: 1;
     top: 50%;
     width: 22px;
     height: 41px;
     background-repeat: no-repeat;
     background-image: url("../img/icon-sprite.svg");
-    opacity: .3; }
+    opacity: .3;
+    cursor: pointer; }
   .reviews__btn--prev{
     left: 130px;
     background-position: -4px -436px; }

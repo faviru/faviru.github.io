@@ -66,19 +66,33 @@
   }
 
 .photo__like-btn {
+  display: none;
+}
+
+.photo__like-label {
   @include btn-default;
   width: 13px;
   height: 12px;
   margin-right: 18px;
-  background-image: url('../img/icon-heart.svg');
+  background-image: url('../img/heart.png');
   background-repeat: no-repeat;
   background-color: transparent;
+  background-size: contain;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .photo__like-count {
   @include typography(12px, 24px, 400, $pink-text-color);
   margin: 0;
   text-transform: uppercase;
+}
+
+.photo__like-btn:checked + label {
+  background-image: url('../img/heart1.png');
 }
 
 @media #{$tablet-widths} {
@@ -110,7 +124,7 @@
     margin-top: auto;
   }
 
-  .photo__like-btn {
+  .photo__like-label {
     order: 1;
     margin-right: 0;
   }

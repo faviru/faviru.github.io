@@ -28,13 +28,10 @@
 
 .reviews__item {
   display: none;
-
-  &:first-of-type {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 5px;
-  }
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 5px;
 }
 
 .reviews__author-name {
@@ -66,6 +63,12 @@
   &:active {
     opacity: 1;
   }
+}
+
+#reviews-input-1:checked ~ .reviews__list > .slider__item--1,
+#reviews-input-2:checked ~ .reviews__list > .slider__item--2,
+#reviews-input-3:checked ~ .reviews__list > .slider__item--3 {
+  display: flex;
 }
 
 @media #{$tablet-widths} {
@@ -135,12 +138,14 @@
     display: block;
     content: '';
     position: absolute;
+    z-index: 1;
     top: 50%;
     width: 22px;
     height: 41px;
     background-repeat: no-repeat;
     background-image: url('../img/icon-sprite.svg');
     opacity: .3;
+    cursor: pointer;
 
     &--prev {
       left: $page-margin-desktop;
