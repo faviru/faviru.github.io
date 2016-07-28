@@ -310,6 +310,9 @@ img {
 .slider__input {
   display: none; }
 
+.slider__viewport {
+  overflow: hidden; }
+
 .slider__toggles {
   text-align: center; }
 
@@ -1996,17 +1999,20 @@ img {
   .reviews::after{
     left: -2px; }
   .reviews__wrapper{
-    padding: 184px 0 9px 0; }
-  .reviews__list{
-    position: relative; }
-  .reviews__list::before{
+    padding: 184px 0 9px 0;
+    width: 890px; }
+  .reviews__wrapper::before{
     position: absolute;
     content: '';
-    top: -113px;
-    left: 434px;
+    top: 68px;
+    left: 563px;
     width: 79px;
     height: 63px;
     background: url("../img/icon-quotes.svg"); }
+  .reviews__list{
+    position: relative; }
+  .reviews__item{
+    display: flex; }
   .reviews__btn{
     display: block;
     content: '';

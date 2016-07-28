@@ -118,20 +118,25 @@
 
   .reviews__wrapper {
     padding: 184px 0 9px 0;
-  }
-
-  .reviews__list {
-    position: relative;
+    width: 890px;
 
     &::before {
       position: absolute;
       content: '';
-      top: -113px;
-      left: 434px;
+      top: 68px;
+      left: 563px;
       width: 79px;
       height: 63px;
       background: url('../img/icon-quotes.svg');
     }
+  }
+
+  .reviews__list {
+    position: relative;
+  }
+
+  .reviews__item {
+    display: flex;
   }
 
   .reviews__btn {
