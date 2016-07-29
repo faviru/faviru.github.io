@@ -56,18 +56,35 @@
   var slideWrapper = slideWidth * countSlides;
   var sliderLeftPosition = 0;
 
-  sliderList.css('height', '210px');
-  sliderItems.css('position', 'absolute');
+  function setSliderContainer() {
+    var pageWidth = $(".page__wrapper").width();
 
-  sliderItems.each(function(i) {
-    sliderItems.eq(i).css('left', sliderLeftPosition);
-    sliderItems.eq(i).css('width', slideWidth);
-    sliderLeftPosition += slideWidth;
-  });
+    if (pageWidth >= 1200) {
+      sliderList.css('height', '210px');
+      sliderItems.css('position', 'absolute');
+      sliderLeftPosition = 0;
+      slideWidth = sliderItems.width();
+      setSlidePosition();
+    } else {
+      sliderList.css('height', 'auto');
+      sliderItems.css({'position': 'relative', 'left': 0});
+      slideWidth = sliderItems.css('width', 'auto');
+    }
+  }
+
+  function setSlidePosition() {
+    sliderItems.each(function(i) {
+      sliderItems.eq(i).css('left', sliderLeftPosition);
+      sliderItems.eq(i).css('width', slideWidth);
+      sliderLeftPosition += slideWidth;
+    });
+  }
+
+  setSliderContainer();
 
   $(window).resize(function() {
-    slideWidth = sliderItems.width();
     slideWrapper = slideWidth * countSlides;
+    setSliderContainer();
   });
 
   function slideItem(direction) {

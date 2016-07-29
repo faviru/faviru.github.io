@@ -410,9 +410,9 @@ img {
   #reviews-input-3:checked ~ .reviews__toggles > label[for="reviews-input-3"]:active {
     opacity: 1; }
 
-#reviews-input-1:checked ~ .reviews__list > .slider__item--1,
-#reviews-input-2:checked ~ .reviews__list > .slider__item--2,
-#reviews-input-3:checked ~ .reviews__list > .slider__item--3 {
+#reviews-input-1:checked ~ .slider__viewport > .reviews__list > .slider__item--1,
+#reviews-input-2:checked ~ .slider__viewport > .reviews__list > .slider__item--2,
+#reviews-input-3:checked ~ .slider__viewport > .reviews__list > .slider__item--3 {
   display: flex; }
 
 .version {
@@ -430,7 +430,8 @@ img {
   padding: 0;
   position: absolute;
   left: -543px;
-  border-collapse: collapse; }
+  border-collapse: collapse;
+  transition: left 0.5s ease; }
   .version__list th,
   .version__list td {
     border: 1px solid #e5e5e5; }

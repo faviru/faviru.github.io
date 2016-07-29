@@ -65,9 +65,9 @@
   }
 }
 
-#reviews-input-1:checked ~ .reviews__list > .slider__item--1,
-#reviews-input-2:checked ~ .reviews__list > .slider__item--2,
-#reviews-input-3:checked ~ .reviews__list > .slider__item--3 {
+#reviews-input-1:checked ~ .slider__viewport > .reviews__list > .slider__item--1,
+#reviews-input-2:checked ~ .slider__viewport > .reviews__list > .slider__item--2,
+#reviews-input-3:checked ~ .slider__viewport > .reviews__list > .slider__item--3 {
   display: flex;
 }
 
