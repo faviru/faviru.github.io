@@ -1,0 +1,254 @@
+body {
+    background-color: #ccc;
+    font-family: 'Karla', "Arial", sans-serif;
+    font-weight: 400;
+    color: #000;
+}
+
+.chat-window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 375px;
+    height: 667px;
+    background-color: #000;
+}
+
+.logo {
+    position: relative;
+    background-color: #00a0ff;
+    background-image: url('img/triangle.png');
+    background-position: 0 31px;
+    background-repeat: no-repeat;
+}
+
+.logo-container {
+    height: 386px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.logo__text {
+    position: relative;
+    margin: 67px 0 0 -9px;
+    font-size: 100px;
+    color: #fff;
+    letter-spacing: -5px;
+}
+
+.logo__image {
+    position: absolute;
+    left: 50%;
+    margin-top: 154px;
+    margin-left: -50px;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px 10px 10px 0;
+    background-color: #ffbdb8;
+}
+
+.logo__image::after {
+    content: ''; 
+    position: absolute;
+    border: 18px solid transparent;
+    border-left: 18px solid #ad807d;
+    transform: rotate(-45deg);
+    bottom: -18px;
+    left: 6px;
+}
+
+.logo__image-dash {
+    position: absolute;
+    top: 35px;
+    left: 20px;
+    height: 8px;
+    width: 60px;
+    background-color: #000;
+}
+
+.logo__image-dash::after {
+    content: ''; 
+    position: absolute;
+    top: 20px;
+    height: 8px;
+    width: 30px;
+    background-color: #000;
+}
+
+.login-block {
+    position: absolute;
+    left: 25px;
+    bottom: 60px;
+    height: 270px;
+    width: 325px;
+    background-color: #fff;
+}
+
+.login-block form {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100%;
+}
+
+.input-section {
+    padding: 35px 0;
+    margin: 0 40px;
+}
+
+.login-block label {
+    width: 100%;
+    font-size: 11px;
+    font-weight: 700;
+    color: #ad807d;
+    text-transform: uppercase;
+}
+
+.login-block input {
+    padding: 9px 0;
+    width: 100%;
+    border-style: none none solid none;
+    border-color: #ccc;
+    border-width: 1px;
+    font-size: 14px;
+    color: #000;
+}
+
+.login-block input:active,
+.login-block input:focus,
+.submit {
+    outline: none;
+}
+
+.login-block__user-name{
+    margin-bottom: 28px;
+}
+
+.login-block .submit {
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    border: none;
+    background-color: #00a0ff;
+    background-image: url('img/submit.png');
+    background-size: 7px;
+    background-repeat: no-repeat;
+    background-position: 40px 50%;
+}
+
+.submit p {
+    color: #fff;
+    text-align: right;
+    margin-right: 35px;
+    font-size: 13px;
+    font-weight: 700;
+    font-family: 'Karla', "Arial", sans-serif;
+}
+
+.dialog-title {
+    text-align: center;
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+    margin: 30px 0 12px 0;
+}
+
+.dialog {
+    position: relative;
+    height: 604px;
+    background-color: #00a0ff;
+    background-image: url('img/triangle.png');
+    background-position: 0 -35px;
+    background-repeat: no-repeat;
+}
+
+.dialog__messages-block {
+    box-sizing: border-box;
+    padding: 40px 25px 50px 25px;
+}
+
+.message {
+    display: inline-block;
+    padding: 20px 25px;
+    background-color: #fff;
+    margin-bottom: 25px;
+}
+.message:nth-child(2n) {
+    float: right;
+}
+.message:nth-child(2n) .message__author {
+    text-align: right;
+}
+.message__text {
+    margin: 0;
+    color: #000;
+    font-size: 15px;
+    line-height: 23px;
+}
+
+.message__author {
+    margin: 0;
+    font-size: 10px;
+    color: #ad807d;
+}
+.input-msg {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.input-msg form {
+    width: 100%;
+    background-color: #000;
+    font-size: 0;
+}
+
+.input-msg__photo {
+    width: 65px;
+    background-image: url('img/camera.png');
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: center;
+    height: 55px;
+    border: none;
+    background-color: #000;
+}
+
+.input-msg__field {
+    display: inline-block;
+    background-color: #000;
+    color: #fff;
+    height: 55px;
+    width: 220px;
+    border: none;
+    padding: 0;
+    font-size: 15px;
+}
+
+.input-msg__btn {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    background-color: #ffbdb8;
+    background-image: url('img/send.png');
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: center;
+}
+
+.input-msg__photo,
+.input-msg__field,
+.input-msg__btn {
+    vertical-align: bottom;
+}
+
+.input-msg__photo:focus,
+.input-msg__field:focus,
+.input-msg__btn:focus {
+    outline: none;
+}
