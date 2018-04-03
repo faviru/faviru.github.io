@@ -1,0 +1,17 @@
+.social {
+  width: 380px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social__item {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover .cls-1{
+    fill: $acent-color;
+  }
+}

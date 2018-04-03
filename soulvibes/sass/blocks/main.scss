@@ -1,0 +1,48 @@
+$text-color: #2a333c;
+$acent-color: #c12127;
+$red-bg-color: #b50b1e;
+$main-font: "Montserrar", sans-serif;
+
+.wrapper {
+  width: 980px;
+  padding: 0 20px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+.body {
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  text-decoration: none;
+}
+
+@mixin typo($size, 
+            $weight, 
+            $family, 
+            $color) {
+
+  font-family: $main-font;
+  font-size: $size;
+  color: $color;
+  font-weight: $weight;
+}
+
+.btn {
+  display: block;
+  height: 40px;
+  background: transparent;
+  border: 1px solid #e1e1e1;
+  border-radius: 3px;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: $main-font;
+  color: $acent-color;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 0 5px rgba(0,0,0, .3);
+  }
+}

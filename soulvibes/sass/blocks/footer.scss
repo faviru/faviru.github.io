@@ -1,0 +1,11 @@
+.footer__container {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  @include typo(14px, 400, $main-font, $text-color);
+  line-height: 1;
+}

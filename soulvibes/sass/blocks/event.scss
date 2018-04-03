@@ -1,0 +1,67 @@
+.event {
+  position: relative;
+  padding-top: 35px;
+  padding-bottom: 25px;
+}
+
+.event:before {
+  content: '';
+  height: 12px;
+  width: 12px;
+  background: #fff;
+  position: absolute;
+  top: 34px;
+  left: -39px;
+  border-radius: 50%;
+}
+ 
+.event:after {
+  content: '';
+  height: 100%;
+  width: 2px;
+  background: #fff;
+  position: absolute;
+  top: 0px;
+  left: -34px;
+}
+
+.event__time {
+  display: inline-block;
+  @include typo(14px, 400, $main-font, #fff);
+  margin: 0 0 15px;
+
+  span {
+    margin-right: 10px;
+    text-transform: capitalize;
+  }
+
+  span:after {
+    content: "/";
+    padding-left: 10px;
+    @include typo(14px, 400, $main-font, #fff);
+  }
+
+  span:last-of-type {
+    text-transform: uppercase;
+  }
+
+  span:last-of-type:after {
+    display: none;
+  }
+}
+
+.event__name {
+  @include typo(48px, 700, $main-font, #fff);
+  text-transform: capitalize;
+  margin: 0 0 15px;
+  padding-left: 5px;
+}
+
+.event__name-of-location,
+.event__location {
+  @include typo(14px, 400, $main-font, #fff);
+  line-height: 24px;
+  text-transform: capitalize;
+  margin: 0;
+  padding-left: 5px;
+}

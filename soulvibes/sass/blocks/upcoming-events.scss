@@ -1,0 +1,26 @@
+.upcoming-events {
+  overflow-y: hidden;
+
+  .wrapper {
+    position: relative;
+  }
+}
+.upcoming-events__background {
+  background: url('../img/events-bg.jpg');
+  height: 485px;
+  background-size: cover;
+}
+
+.upcoming-events__container {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 45px;
+}
+
+.upcoming-events__img {
+  position: absolute;
+  bottom: -35px;
+  right: 0;
+  width: 540px;
+  height: 572px;
+}

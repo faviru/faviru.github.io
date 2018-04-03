@@ -1,0 +1,55 @@
+.join {
+  background: #30333c;
+  .wrapper {
+    padding: 50px 0 60px;
+    background-image: url('../img/join-bg.jpg');
+    background-position-x: 552px;
+    background-repeat: no-repeat;
+  }
+}
+
+.join form {
+  position: relative;
+}
+
+.join__container {
+  width: 620px;
+}
+
+.join__title {
+  font-size: 60px;
+  font-weight: 700;
+  color: #fff;
+  font-family: 'Lora', serif;
+  margin: 0 0 25px;
+  line-height: 1;
+  text-shadow: 0 7px 15px rgba(0, 0, 0, .4);
+}
+
+.join__text {
+  padding-right: 100px;
+  @include typo(18px, 700, $main-font , #fff);
+}
+
+.join__email-input {
+  width: 620px;
+  height: 60px;
+  box-sizing: border-box;
+  padding: 20px 25px;
+  @include typo(14px, 400, $main-font, #999);
+  border-radius: 3px;
+  border: none;
+}
+
+.join__submit {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 120px;
+  height: 50px;
+  background: $red-bg-color;
+  @include typo(14px, 700, $main-font, #fff);
+  border: none;
+  border-radius: 3px;
+  text-transform: uppercase;
+}

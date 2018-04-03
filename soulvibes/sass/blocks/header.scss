@@ -1,0 +1,28 @@
+.header {
+  background: url('../img/header-bg.jpg') no-repeat;
+  background-size: cover;
+}
+
+.header__container {
+  min-height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__menu {
+  display: flex;
+  padding-right: 20px;
+  justify-content: space-between;
+}
+
+.header__menu-item {
+  @include typo(14px, 700, $main-font, #fff);
+  padding: 20px;
+  text-transform: uppercase;
+
+  &--current,
+  &:hover {
+    opacity: .5;
+  }
+}

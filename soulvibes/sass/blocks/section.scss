@@ -1,0 +1,30 @@
+
+
+.section__title {
+  position: relative;
+  margin: 50px 0;
+  @include typo(36px, 700, $main-font, $text-color);
+  text-transform: capitalize;
+
+  &:before {
+    content: '';
+    top: 15px;
+    left: -32px;
+    display: block;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    border-radius: 50%;
+    background: #dddddd;
+  }
+  &:after {
+    content: '';
+    top: 20px;
+    left: calc(-100vw + 980px);
+    display: block;
+    width: calc(100vw - 1012px);
+    height: 2px;
+    position: absolute;
+    background: #dddddd;
+  }
+}
