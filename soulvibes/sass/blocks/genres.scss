@@ -3,7 +3,7 @@
   justify-content: space-between;
   flex-wrap: wrap;
   flex-basis: 980px;
-  height: 380px;
+  // height: 380px;
 }
 
 
@@ -16,6 +16,7 @@
   border: 1px solid #e1e1e1;
   border-radius: 3px;
   box-sizing: border-box;
+  margin-bottom: 20px;
 
   &:hover {
     box-shadow: 0 0 5px rgba(0,0,0, .3);
@@ -46,4 +47,37 @@
   padding: 0;
   width: 300px;
   font-size: 18px;
+}
+
+
+
+@media (max-width: 979px) {
+  .genres__item {
+    flex-basis: 140px;
+    height: 150px;
+  }
+  
+  .genres__item-name {
+    font-size: 16px;
+  }
+
+  .genres__more-btn {
+    margin-top: 28px;
+  }
+}
+
+@media (max-width: 659px) {
+  .genres__item {
+    flex-basis: 130px;
+    height: 140;
+  }
+
+  .genres__item-logo {
+    margin-top: 20px;
+  }
+
+  .genres__more-btn {
+    width: 100%;
+    margin-top: 16px;
+  }
 }

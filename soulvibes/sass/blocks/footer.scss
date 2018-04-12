@@ -9,3 +9,17 @@
   @include typo(14px, 400, $main-font, $text-color);
   line-height: 1;
 }
+
+
+@media (max-width: 659px) {
+  .footer__container {
+    flex-wrap: wrap;
+    padding: 30px 0;
+    height: 120px;
+  }
+
+  .copyright {
+    order: 1;
+    text-align: center;
+  }
+}

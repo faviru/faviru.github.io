@@ -9,6 +9,7 @@ $main-font: "Montserrar", sans-serif;
   box-sizing: border-box;
   margin: 0 auto;
 }
+
 .body {
   -webkit-font-smoothing: antialiased;
 }
@@ -44,5 +45,20 @@ a {
 
   &:hover {
     box-shadow: 0 0 5px rgba(0,0,0, .3);
+  }
+}
+
+@media (max-width: 979px) {
+  .wrapper {
+    width: 660px;
+  }
+  .btn {
+    height: 34px;
+  }
+}
+
+@media (max-width: 659px) {
+  .wrapper {
+    width: 320px;
   }
 }

@@ -163,3 +163,27 @@ input[type=range].player__track-bar:focus::-ms-fill-lower {
 input[type=range].player__track-bar:focus::-ms-fill-upper {
   background: #000000;
 }
+
+
+@media (max-width: 659px) {
+  .player__wrapper{
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 140px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .player__play-btn,
+  .player__loop-btn,
+  .player__volume-btn {
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    background-size: contain;
+  }
+
+  .player__track {
+    order: 10;
+  }
+}

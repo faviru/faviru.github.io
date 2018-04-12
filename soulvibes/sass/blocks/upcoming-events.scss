@@ -24,3 +24,27 @@
   width: 540px;
   height: 572px;
 }
+
+@media (max-width: 979px) {
+  .upcoming-events__background {
+    height: 375px;
+  }
+  .upcoming-events__container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  .upcoming-events__img {
+    width: auto;
+    height: 450px;
+  }
+}
+
+
+@media (max-width: 659px) {
+  .upcoming-events__background {
+    height: 415px;
+  }
+  .upcoming-events__img {
+    display: none;
+  }
+}

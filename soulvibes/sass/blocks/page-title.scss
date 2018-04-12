@@ -12,3 +12,22 @@
     font-weight: 700;
   }
 }
+
+@media (max-width: 979px) {
+  .page-title {
+    height: 380px;
+  }
+
+  .page-title__title {
+    font-size: 64px;
+  }
+}
+
+
+@media (max-width: 659px) {
+  .page-title__title {
+    margin-top: 15px;
+    font-size: 54px;
+    text-align: center;
+  }
+}

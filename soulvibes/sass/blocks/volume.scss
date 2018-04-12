@@ -127,3 +127,24 @@
 .volume__bar:focus::-ms-fill-upper {
   background: #000000;
 }
+
+
+@media (max-width: 659px) {
+  .volume {
+    left: -35px;
+    width: 110px;
+    top: -80px;
+    height: 30px;
+  }
+
+  .volume__container {
+    height: 50px;
+  }
+
+  
+  .volume__bar::-webkit-slider-runnable-track,
+  .volume__bar::-moz-range-track,
+  .volume__bar::-ms-track {
+    height: 7px;
+  }
+}

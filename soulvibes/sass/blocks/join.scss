@@ -1,7 +1,7 @@
 .join {
   background: #30333c;
   .wrapper {
-    padding: 50px 0 60px;
+    padding: 50px 20px 60px;
     background-image: url('../img/join-bg.jpg');
     background-position-x: 552px;
     background-repeat: no-repeat;
@@ -35,7 +35,7 @@
   width: 620px;
   height: 60px;
   box-sizing: border-box;
-  padding: 20px 25px;
+  padding: 20px 145px 20px 25px;
   @include typo(14px, 400, $main-font, #999);
   border-radius: 3px;
   border: none;
@@ -52,4 +52,72 @@
   border: none;
   border-radius: 3px;
   text-transform: uppercase;
+}
+
+@media (max-width: 979px) {
+  .join .wrapper {
+    padding: 30px 20px 40px;
+    background-position-x: 382px;
+    background-size: contain;
+  }
+
+  .join__container {
+    width: 470px;
+  }
+
+  .join__title {
+    font-size: 48px;
+    margin-bottom: 16px;
+  }
+
+  .join__text {
+    font-size: 14px;
+  }
+
+  .join__email-input {
+    width: 420px;
+    height: 46px;
+    padding: 10px 115px 10px 15px;
+  }
+
+  .join__submit{
+    right: 55px;
+    width: 100px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 659px) {
+  .join .wrapper {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .join__container {
+    width: 280px;
+  }
+
+  .join__title {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .join__text {
+    padding-right: 20px;
+    font-size: 16px;
+  }
+
+  .join__email-input {
+    width: 280px;
+    padding: 10px;
+  }
+
+  .join__submit {
+    position: relative;
+    left: auto;
+    right: auto;
+    margin-top: 10px;
+  }
 }
